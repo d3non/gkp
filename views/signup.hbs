@@ -1,25 +1,45 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md">
-            <form id="signup" name="signup" method="post" action="/signup">
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="firstname">First Name</label>
-                    <input type="text" name="firstname" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="lastname">Last Name</label>
-                    <input type="text" name="lastname" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-primary">Sign Up</button>
-            </form>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v6 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/nunito-font.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body class="form-v6">
+	<div class="page-content">
+		<div class="form-v6-content">
+			<div class="form-left">
+				<img src="/assets/images/promo.png" alt="form">
+			</div>
+                <form class="form-detail" id="signup" name="signup" method="post" action="/signup">
+                    <h2>Register Form</h2>
+
+                    <div class="form-group">
+  					    <input type="text" name="firstname" id="firstname" class="input-text" placeholder="First Name" required>
+				    </div>
+
+                    <div class="form-row">
+                        <input type="text" name="lastname" id="lastname" class="input-text" placeholder="Last Name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" name="email" id="exampleInputEmail1" class="input-text" placeholder="Email Address" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+                    </div>
+
+                    <div class="form-row">
+                        <input type="password" name="password" id="exampleInputPassword1" class="input-text" placeholder="Password" required>
+                    </div>
+
+                    <div class="form-row-last">
+					    <input type="submit" class="register" value="Register">
+				    </div>
+                </form>
         </div>
     </div>
-</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

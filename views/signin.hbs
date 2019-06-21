@@ -1,20 +1,47 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md">
-      <form id="signin" name="signin" method="post" action="signin">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        {{#if message}}
-          <div class="alert alert-danger">{{message}}</div>
-        {{/if}}
-        <button type="submit" class="btn btn-primary">Sign In</button>
-      </form>
-    </div>
-  </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v6 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="/assets/css/nunito-font.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body class="form-v6">
+	<div class="page-content">
+		<div class="form-v6-content">
+			<div class="form-left">
+				<img src="/assets/images/form-v6.jpg" alt="form">
+			</div>
+			<form class="form-detail" id="signin" name="signin" method="post" action="signin">
+        <h2>Signin Form</h2>
+ 				<div class="form-row">
+					<input type="text" name="email" id="exampleInputEmail1" class="input-text" placeholder="Email Address" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+				</div>
+				<div class="form-row">
+					<input type="password" name="password" id="exampleInputPassword1" class="input-text" placeholder="Password" required>
+				</div>
+
+				<!--<div class="form-group">
+				  <label for="exampleInputEmail1">Email address</label>
+				  <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				</div>
+				<div class="form-group">
+				  <label for="exampleInputPassword1">Password</label>
+				  <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				</div><-->
+
+				{{#if message}}
+				  <div class="alert alert-danger">{{message}}</div>
+				{{/if}}
+				<div class="form-row-last">
+					<input type="submit" class="register" value="Submit">
+				</div>
+			  </form>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

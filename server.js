@@ -1,14 +1,10 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable curly */
-/* eslint-disable quotes */
-/* eslint-disable prettier/prettier */
 const path = require('path');
 const express = require('express');
 const app = express();
 const passport = require('passport');
 const session = require('express-session');
 const bodyParser = require('body-parser');
-//const env = require('dotenv').load();
+const env = require('dotenv').load();
 const exphbs = require('express-handlebars');
 
 // BodyParser
@@ -45,7 +41,6 @@ const models = require('./models');
 app.use(express.static("public"));
 
 // Routes
-// eslint-disable-next-line no-unused-vars
 const authRoute = require('./controllers/auth.js')(app, passport);
 
 // Load passport strategies

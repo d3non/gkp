@@ -69,117 +69,12 @@
     </section>
     <!-- Hero Section End -->
 
-    <!-- Hotel Room Section Begin -->
-    <section class="hotel-rooms spad">
-        <div class="container">
-            <form method="post">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-items">
-                        <div class="room-img set-bg" data-setbg="/assets/images/street/1.jpg">
-                        </div>
-                        <div class="room-text">
-                            <div class="room-price">
-                                    <span>Valle De Salazar</span>
-                            </div>
-                            <input type="submit" class="site-btn btn-line" value="View" formaction="/visits/1">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-items">
-                        <div class="room-img set-bg" data-setbg="/assets/images/street/2.jpg">
-
-                        </div>
-                        <div class="room-text">
-
-                            <div class="room-price">
-                                <span>Uco</span>
-                            </div>
-                            <input type="submit" class="site-btn btn-line" value="View" formaction="/visits/2">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-items">
-                        <div class="room-img set-bg" data-setbg="/assets/images/street/3.jpg">
-
-                        </div>
-                        <div class="room-text">
-                        <div class="room-price">
-                                <span>Ulúa</span>
-                        </div>
-                            <input type="submit" class="site-btn btn-line" value="View" formaction="/visits/3">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-items">
-                        <div class="room-img set-bg" data-setbg="/assets/images/street/4.jpg">
-
-                        </div>
-                        <div class="room-text">
-                            <div class="room-details">
-                            </div>
-
-                            <div class="room-price">
-                                <span>Belvedere</span>
-                            </div>
-                            <input type="submit" class="site-btn btn-line" value="View" formaction="/visits/4">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-items">
-                        <div class="room-img set-bg" data-setbg="/assets/images/street/5.jpg">
-
-                        </div>
-                        <div class="room-text">
-                            <div class="room-details">
-
-                            </div>
-
-                            <div class="room-price">
-                                <span>Bianco</span>
-                            </div>
-                            <input type="submit" class="site-btn btn-line" value="View" formaction="/visits/5">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-items">
-                        <div class="room-img set-bg" data-setbg="/assets/images/street/6.jpg">
-
-                        </div>
-                        <div class="room-text">
-                            <div class="room-details">
-
-                            </div>
-
-                            <div class="room-price">
-                                <span>Sulé</span>
-                            </div>
-                            <input type="submit" class="site-btn btn-line" value="View" formaction="/visits/6">
-                        </div>
-                    </div>
-                </div>
+        {{#each visits}}
+            <div class="input-group">
+              <li class="form-control">{{this.visit_fname}} {{this.visit_lname}} {{this.car_model}} {{this.car_plates}}</li>
             </div>
-            </form>
-        </div>
-    </section>
-    <!-- Hotel Room Section End -->
-    <!-- Popular Room Section Begin -->
+        {{/each}}
 
-    <!-- Popular Room Section End -->
-    <!-- Newslatter Section Begin -->
-
-    <!-- Newslatter Section End -->
-    <!-- Servies Section Begin -->
-
-    <!-- Servies Section End -->
-
-    <!-- Footer Section Begin -->
     <footer class="footer-section">
         <!-- Rooms Pic Section Begin-->
 

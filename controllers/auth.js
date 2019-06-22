@@ -1,5 +1,7 @@
 module.exports = (app, passport) => {
   var flash=require("connect-flash");
+  var main = require('../models/main.js');
+
   app.use(flash());
 
   app.get('/', (req, res) => {
@@ -46,4 +48,15 @@ module.exports = (app, passport) => {
 
     res.redirect('/signin');
   }
+
+  app.post('/visits/:id_street', function (req, res) 
+  {
+    main.selectAll(req.params.id_street, function(data) 
+    {
+      var hbsObject = { visits: data };
+      console.log(hbsObject);
+      res.render('visits', hbsObject);
+    });
+  });
+
 };

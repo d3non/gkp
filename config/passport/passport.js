@@ -14,8 +14,7 @@ module.exports = (passport, user) => {
 
   // used to deserialize the user
   passport.deserializeUser((id, done) => {
-    console.log("passport.deserializeUser");
-    
+ 
     user.findById(id).then(user => {
       if (user) {
         done(null, user.get());
@@ -35,7 +34,6 @@ module.exports = (passport, user) => {
       },
 
       function(req, email, password, done) {
-        console.log("Local signup");
         var generateHash = password => {
           return bCrypt.hashSync(password, bCrypt.genSaltSync(8), null);
         };
@@ -81,7 +79,6 @@ module.exports = (passport, user) => {
       },
 
       function(req, email, password, done) {
-        console.log("Local signin");
         var User = user;
 
         var isValidPassword = (userpass, password) => {

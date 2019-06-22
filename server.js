@@ -52,7 +52,7 @@ models.sequelize
   .then(function() {
     console.log('Database Connected');
 
-    app.listen(5000, function(err) {
+    app.listen((process.env.PORT || 5000), function(err) {
       if (!err) console.log('Connected at http://localhost:5000');
       else console.log(err);
     });

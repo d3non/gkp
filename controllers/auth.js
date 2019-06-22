@@ -7,12 +7,10 @@ module.exports = (app, passport) => {
   });
 
   app.get('/signup', (req, res) => {
-    console.log("signup");
     res.render('signup');
   });
 
   app.get('/signin', (req, res) => {
-    console.log("get signin " + req.flash('loginMessage'));
     res.render('signin', { message: req.flash('loginMessage') });
   });
 

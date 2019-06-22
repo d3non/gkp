@@ -15,10 +15,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "gatekeepers",
-    "host": "127.0.0.1",
+    "username": "b45840ec47f61c",
+    "password": "bd6c1d48",
+    "port": 3306,
+    "database": "heroku_9343667342ca503",
+    "host": "us-cdbr-iron-east-02.cleardb.net",
     "dialect": "mysql"
   }
 }

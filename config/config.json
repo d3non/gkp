@@ -1,10 +1,10 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
+    "username": "b45840ec47f61c",
+    "password": "bd6c1d48",
     "port": 3306,
-    "database": "gatekeepers",
-    "host": "127.0.0.1",
+    "database": "heroku_9343667342ca503",
+    "host": "us-cdbr-iron-east-02.cleardb.net",
     "dialect": "mysql"
   },
   "test": {

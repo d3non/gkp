@@ -42,20 +42,9 @@
                     <ul class="main-menu">
                         <li><a href="./index.html">Home</a></li>
                         <li><a href="./search.html">Search Results</a></li>
-                        <li><a href="./about.html">Categories</a></li>
-                        <li><a href="./single-property.html">Single Property</a></li>
                         <li><a href="./blog.html">Blog</a></li>
                         <li><a href="./contact.html">Contact</a></li>
 
-                        <!-->
-                        <li class="top-social">
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                        </li>
-                        <-->
                     </ul>
                     <div id="mobile-menu-wrap"></div>
                 </div>
@@ -69,11 +58,29 @@
     </section>
     <!-- Hero Section End -->
 
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">House</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Plates</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
         {{#each visits}}
-            <div class="input-group">
-              <li class="form-control">{{this.visit_fname}} {{this.visit_lname}} {{this.car_model}} {{this.car_plates}}</li>
-            </div>
+            <tr>
+            <th scope="row">{{this.house_number}}</th>
+            <td>{{this.visit_fname}}</td>
+            <td>{{this.visit_lname}}</td>
+            <td>{{this.car_plates}}</td>
+            <td>{{this.visit_date}}</td>
+            </tr>
         {{/each}}
+  </tbody>
+</table>
+
 
     <footer class="footer-section">
         <!-- Rooms Pic Section Begin-->

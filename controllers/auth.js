@@ -12,7 +12,7 @@ module.exports = (app, passport) => {
     res.render('signup');
   });
 
-  app.get('/signin', (req, res) => {
+  app.get('/', (req, res) => {
     res.render('signin', { message: req.flash('loginMessage') });
   });
 
@@ -35,10 +35,10 @@ module.exports = (app, passport) => {
   });
 
   app.post(
-    '/signin',
+    '/',
     passport.authenticate('local-signin', {
       successRedirect: '/home',
-      failureRedirect: '/signin', failureFlash: 'Invalid username or password' 
+      failureRedirect: '/', failureFlash: 'Invalid username or password' 
     })
   );
 
@@ -46,7 +46,7 @@ module.exports = (app, passport) => {
     console.log("isLoggedIn");
     if (req.isAuthenticated()) return next();
 
-    res.redirect('/signin');
+    res.redirect('/');
   }
 
   app.post('/visits/:id_street', function (req, res) 

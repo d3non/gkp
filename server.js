@@ -6,6 +6,7 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const env = require('dotenv').load();
 const exphbs = require('express-handlebars');
+var helpers = require('handlebars-helpers')();
 
 // BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,7 +19,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Handlebars
+// Handlebars config
 const viewsPath = path.join(__dirname, 'views');
 const layoutsPath = path.join(viewsPath, 'layouts');
 const partialsPath = path.join(viewsPath, 'partials');
@@ -33,6 +34,7 @@ const exphbsConfig = exphbs.create({
 
 app.engine('hbs', exphbsConfig.engine);
 app.set('view engine', '.hbs');
+// Handlebars config
 
 // Models
 const models = require('./models');

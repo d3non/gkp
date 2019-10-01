@@ -16,20 +16,28 @@
 			<div class="form-left">
 				<img src="/assets/images/promo.png" alt="form">
 			</div>
-          <form class="form-detail" method="post">
-              <h2>Gatekeepers control access</h2>
-              
-              <div class="form-row-last">
-                <input type="submit" class="register" value="Signin" formaction="/signin">
-              </div>
+			<form class="form-detail" id="signin" name="signin" method="post" action="/">
+        		<h2>Signin Form</h2>
+ 				<div class="form-row">
+					<input type="text" name="email" id="exampleInputEmail1" class="input-text" placeholder="Email Address" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+				</div>
+				<div class="form-row">
+					<input type="password" name="password" id="exampleInputPassword1" class="input-text" placeholder="Password" required>
+				</div>
 
-              <div class="form-row-last">
-                <input type="submit" class="register" value="Signup" formaction="/signup">
-              </div>
-          </form>
+				{{#if message}}
+				  <div class="alert alert-danger">{{message}}</div>
+				{{/if}}
+				<div class="form-row-last">
+					<input type="submit" class="register" value="Submit">
+				</div>
 
-    </div>
-  </div>
+				<div class="form-row-last">
+					<a href="/signup">¿No tienes cuenta aún?, Regístrate</a>
+				</div>
 
+			</form>
+		</div>
+	</div>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
